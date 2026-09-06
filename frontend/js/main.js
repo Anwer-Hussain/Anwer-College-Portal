@@ -765,24 +765,18 @@ function initAdmissionForm() {
       showConfirmModal(entry);
       showToast("Enquiry logged successfully into portal records!", "🎉");
 
-      // Dispatch alert to meerananwer12@gmail.com via EmailJS
-      sendEmailViaEmailJs({
-        to_name: "Dean of Admissions",
-        to_email: EMAILJS_CONFIG.targetEmail,
-        from_name: payload.fullName,
-        name: payload.fullName,
-        from_email: payload.email,
+      // Dispatch alert to meerananwer12@gmail.com via EmailJS with all template variable mappings
+      const emailPayload = buildEmailTemplateParams({
+        fullName: payload.fullName,
         email: payload.email,
-        reply_to: payload.email,
         phone: payload.phone,
         department: payload.department,
-        marks: payload.marksPercentage ? `${payload.marksPercentage}%` : "Not Provided",
+        marksPercentage: payload.marksPercentage,
         quota: payload.quota,
-        message: payload.message || "New admission enquiry submitted via online college portal.",
-        application_id: entry.applicationId,
-        form_type: "Admission Enquiry",
-        received_at: new Date().toLocaleString("en-IN")
+        message: payload.message,
+        applicationId: entry.applicationId
       });
+      sendEmailViaEmailJs(emailPayload);
     } catch (err) {
       if (formStatus) {
         formStatus.className = "form-status-alert is-error";
@@ -1174,6 +1168,91 @@ async function sendEmailViaEmailJs(params) {
   }
 }
 
+/**
+ * Maps form data to all possible variable formats used in EmailJS templates:
+ * - Exact Display Labels (e.g. "Full Name", "Email Address", "12th / Diploma Score")
+ * - camelCase (e.g. fullName, emailAddress, marksPercentage, diplomaScore)
+ * - snake_case (e.g. full_name, email_address, marks_percentage, diploma_score)
+ * - Standard short names (e.g. name, email, phone, branch, score, query, message)
+ */
+function buildEmailTemplateParams(data) {
+  const name = (data.fullName || data.name || "").trim();
+  const email = (data.email || "").trim();
+  const phone = (data.phone || data.mobile || "Not Provided").trim();
+  const branch = (data.department || data.branch || data.subject || "General Engineering").trim();
+  const rawScore = data.marksPercentage ? String(data.marksPercentage).replace(/%/g, "").trim() : "N/A";
+  const route = (data.quota || data.admissionRoute || "Direct Enquiry").trim();
+  const query = (data.message || data.query || "No specific query provided.").trim();
+  const ticket = data.applicationId || data.ticketId || `ACET-${Date.now().toString().slice(-4)}`;
+
+  return {
+    // 1. Exact Label Match (matching the user's EmailJS visual template table)
+    "Full Name": name,
+    "Email Address": email,
+    "Mobile Number": phone,
+    "Preferred Branch": branch,
+    "12th / Diploma Score": rawScore,
+    "12th/Diploma Score": rawScore,
+    "12th Diploma Score": rawScore,
+    "Admission Route": route,
+    "Candidate's Query": query,
+    "Candidates Query": query,
+    "Candidate Query": query,
+
+    // 2. camelCase Variations
+    fullName: name,
+    emailAddress: email,
+    mobileNumber: phone,
+    preferredBranch: branch,
+    diplomaScore: rawScore,
+    marksPercentage: rawScore,
+    admissionRoute: route,
+    candidateQuery: query,
+    candidatesQuery: query,
+    specificQuery: query,
+
+    // 3. snake_case Variations
+    full_name: name,
+    email_address: email,
+    mobile_number: phone,
+    preferred_branch: branch,
+    diploma_score: rawScore,
+    marks_percentage: rawScore,
+    admission_route: route,
+    candidate_query: query,
+    candidates_query: query,
+    specific_query: query,
+
+    // 4. Standard EmailJS Default Fields
+    name: name,
+    from_name: name,
+    student_name: name,
+    email: email,
+    from_email: email,
+    reply_to: email,
+    phone: phone,
+    mobile: phone,
+    phone_number: phone,
+    department: branch,
+    branch: branch,
+    score: rawScore,
+    marks: rawScore,
+    quota: route,
+    route: route,
+    message: query,
+    query: query,
+
+    // 5. Context & Metadata
+    to_name: "Dean of Admissions & Principal",
+    to_email: EMAILJS_CONFIG.targetEmail,
+    application_id: ticket,
+    ticket_id: ticket,
+    subject: `Admission Enquiry: ${name} (${branch})`,
+    received_at: new Date().toLocaleString("en-IN")
+  };
+}
+
+
 // ==========================================================================
 // CAMPUS CONTACT FORM & LOCAL STORAGE
 // ==========================================================================
@@ -1319,20 +1398,16 @@ function initContactForm() {
     updateContactCounts();
 
     // 3. Dispatch via EmailJS to meerananwer12@gmail.com
-    const emailRes = await sendEmailViaEmailJs({
-      to_name: "Principal & Admin Office",
-      to_email: EMAILJS_CONFIG.targetEmail,
-      from_name: name,
-      name: name,
-      from_email: email,
+    const emailRes = await sendEmailViaEmailJs(buildEmailTemplateParams({
+      fullName: name,
       email: email,
-      reply_to: email,
       phone: phone || "Not Provided",
-      subject: `[Campus Enquiry] ${subject}`,
+      department: subject,
+      marksPercentage: "N/A",
+      quota: "Direct Campus Message",
       message: message,
-      ticket_id: ticketId,
-      received_at: new Date().toLocaleString("en-IN")
-    });
+      ticketId: ticketId
+    }));
 
     if (submitBtn) {
       submitBtn.disabled = false;
