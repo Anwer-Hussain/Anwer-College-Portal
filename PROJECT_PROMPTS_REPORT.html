@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anwer College Portal - Complete Project Prompts & Workflow Log</title>
+  <style>
+    :root {
+      --primary: #071120;
+      --accent: #2563eb;
+      --gold: #f59e0b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .header-info h1 {
+      font-size: 24px;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .header-info p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #eff6ff;
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .print-btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .print-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .phase-heading {
+      margin: 32px 0 16px;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .phase-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .prompt-card {
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      background: #fff;
+      transition: transform 0.1s;
+    }
+
+    .prompt-card.technical {
+      border-left-color: #10b981;
+    }
+
+    .prompt-card.config {
+      border-left-color: #8b5cf6;
+    }
+
+    .prompt-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+
+    .prompt-num {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .prompt-time {
+      color: var(--muted);
+      font-family: monospace;
+      font-size: 12px;
+    }
+
+    .prompt-text {
+      font-size: 14px;
+      color: #334155;
+      white-space: pre-wrap;
+      background: #f8fafc;
+      padding: 12px 14px;
+      border-radius: 6px;
+      border: 1px solid #f1f5f9;
+      font-family: inherit;
+    }
+
+    .prompt-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: #e2e8f0;
+      color: #475569;
+      margin-top: 8px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .container {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+      }
+      .print-btn {
+        display: none;
+      }
+      .prompt-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div class="header-info">
+      <h1>Anwer College Portal &mdash; Complete Prompt Log</h1>
+      <p>Official chronological record of all prompts from project inception to production hosting on Vercel.</p>
+      <span class="badge">Project: Anwer College of Engineering and Technology</span>
+      <span class="badge" style="background:#fef3c7; color:#b45309;">Live: anwer-college-portal.vercel.app</span>
+    </div>
+    <button class="print-btn" onclick="window.print()">
+      🖨️ Save as PDF / Print
+    </button>
+  </div>
+
+  <!-- PHASE 1: PROJECT INITIATION & DESIGN -->
+  <div class="phase-heading">Phase 1: Project Initiation &amp; High-End UI Styling</div>
+
+  <div class="prompt-card">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 1</span>
+      <span class="prompt-time">2026-09-06 18:46 IST</span>
+    </div>
+    <div class="prompt-text">this is my college project my mentor asked me to craete a website for a college. can you make the website looks good, more attractive and professional. it should be a working model. im planning to host it using vercel for free. later ill add domain in it.</div>
+    <span class="prompt-tag">Project Kickoff &bull; Architecture</span>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 2</span>
+      <span class="prompt-time">2026-09-06 18:49 IST</span>
+    </div>
+    <div class="prompt-text">i dont have time to read this. do whatever that make the website look so good and professtional add animations across the website.</div>
+    <span class="prompt-tag">UI/UX Styling &bull; Animation System</span>
+  </div>
+
+  <!-- PHASE 2: LEADERSHIP & FACULTY PERSONALIZATION -->
+  <div class="phase-heading">Phase 2: Leadership &amp; Faculty Customization</div>
+
+  <div class="prompt-card">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 3</span>
+      <span class="prompt-time">2026-09-06 19:12 IST</span>
+    </div>
+    <div class="prompt-text">could you change the College Leadership & Administration profile. i have saved the pictues with their name replace the old names with new one. make the Anwer Hussain S S as the highest leadership and assign the remaining as your wish.</div>
+    <span class="prompt-tag">Administration Profiles</span>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 4</span>
+      <span class="prompt-time">2026-09-06 19:13 IST</span>
+    </div>
+    <div class="prompt-text">could you change the College Leadership & Administration profile. i have saved the pictues with their name replace the old names with new one. make the Anwer Hussain S S as the highest leadership and assign the remaining as your wish. I have saved the images in the pics/Admin/ folder</div>
+    <span class="prompt-tag">Asset Mapping &bull; Leadership Photos</span>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 5</span>
+      <span class="prompt-time">2026-09-06 19:30 IST</span>
+    </div>
+    <div class="prompt-text">ok, now replace the persons in the Distinguished Faculty & Research Scholars section. i have saved the images in the pics/Faculty/ folder. make the Mohammed Faizal J has higher position in cyber security and Jivan Karthec has higher position in cloud, assign the remaining as your wish. and also there is a name issue in the admin, i saw Er. Ridha Fathima. and also the profiles are always moving and stops only cursor is on the profile. if i want to see the one which is hidden i could not view it so add a right and left arrown on the both side so i can move before and after.</div>
+    <span class="prompt-tag">Faculty Profiles &bull; Carousel Carousel Controls</span>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 6</span>
+      <span class="prompt-time">2026-09-06 19:38 IST</span>
+    </div>
+    <div class="prompt-text">i have updated some pictues of the peoples in the Admin, Shameera Fathima and Thameem Basha. ive attached the image that the arrows, i can see 4 arrows instead can we remove the arroes and make the profiles move automatically if i scroll the mouse the profile should make in the same way. 
+
+and make the person Basith in the Faculty as a Ismalic Head instead software.</div>
+    <span class="prompt-tag">Smooth Wheel-Scroll Drift &bull; Department Reassignment</span>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 7</span>
+      <span class="prompt-time">2026-09-06 19:42 IST</span>
+    </div>
+    <div class="prompt-text">i have updated the photos of Basith and Sridhar.</div>
+    <span class="prompt-tag">Image Sync</span>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 8</span>
+      <span class="prompt-time">2026-09-06 19:43 IST</span>
+    </div>
+    <div class="prompt-text">also i have updated the image of Syed Ali</div>
+    <span class="prompt-tag">Image Sync</span>
+  </div>
+
+  <!-- PHASE 3: EMAILJS INTEGRATION & FORM DELIVERY -->
+  <div class="phase-heading">Phase 3: Real EmailJS Service &amp; Form Handling</div>
+
+  <div class="prompt-card technical">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 9</span>
+      <span class="prompt-time">2026-09-06 20:05 IST</span>
+    </div>
+    <div class="prompt-text">i have setup a account in Email JS and created a service. make the contact form work.</div>
+    <span class="prompt-tag">EmailJS Service Setup</span>
+  </div>
+
+  <div class="prompt-card technical">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 10</span>
+      <span class="prompt-time">2026-09-06 20:26 IST</span>
+    </div>
+    <div class="prompt-text">public key: 0WR6ahkACe6eHYlt0
+template ID: template_1n0155w</div>
+    <span class="prompt-tag">API Credentials</span>
+  </div>
+
+  <div class="prompt-card technical">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 11</span>
+      <span class="prompt-time">2026-09-06 20:33 IST</span>
+    </div>
+    <div class="prompt-text">i want to push the codes to my github account.</div>
+    <span class="prompt-tag">Git Initialization</span>
+  </div>
+
+  <div class="prompt-card technical">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 12</span>
+      <span class="prompt-time">2026-09-06 20:36 IST</span>
+    </div>
+    <div class="prompt-text">https://github.com/Anwer-Hussain/Anwer-College-Portal</div>
+    <span class="prompt-tag">GitHub Remote Setup</span>
+  </div>
+
+  <div class="prompt-card technical">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 13</span>
+      <span class="prompt-time">2026-09-06 20:39 IST</span>
+    </div>
+    <div class="prompt-text">i have created email template for this. and also when i submit and check my mail everything is blank</div>
+    <span class="prompt-tag">Template Variables Debugging</span>
+  </div>
+
+  <div class="prompt-card technical">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 14</span>
+      <span class="prompt-time">2026-09-06 20:45 IST</span>
+    </div>
+    <div class="prompt-text">i getting every field values except email field</div>
+    <span class="prompt-tag">Email Key Mapping (reply_to, from_email, email)</span>
+  </div>
+
+  <div class="prompt-card technical">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 15</span>
+      <span class="prompt-time">2026-09-06 20:49 IST</span>
+    </div>
+    <div class="prompt-text">in the test mail you have sent does have name and phone no. also remove the another form which is unnecessary</div>
+    <span class="prompt-tag">Form Consolidation &bull; Candidate Enquiry Only</span>
+  </div>
+
+  <div class="prompt-card technical">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 16</span>
+      <span class="prompt-time">2026-09-06 20:54 IST</span>
+    </div>
+    <div class="prompt-text">have you pushed all the codes to github</div>
+    <span class="prompt-tag">Git Sync Confirmation</span>
+  </div>
+
+  <!-- PHASE 4: VERCEL DEPLOYMENT & 404 RESOLUTION -->
+  <div class="phase-heading">Phase 4: Vercel Cloud Deployment &amp; 404 Resolution</div>
+
+  <div class="prompt-card config">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 17</span>
+      <span class="prompt-time">2026-09-06 20:56 IST</span>
+    </div>
+    <div class="prompt-text">could you help me to deploy this in vercel?
+[Attached screenshot of initial Vercel setup screen with VitePress preset selected]</div>
+    <span class="prompt-tag">Deployment Initiation</span>
+  </div>
+
+  <div class="prompt-card config">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 18</span>
+      <span class="prompt-time">2026-09-06 21:18 IST</span>
+    </div>
+    <div class="prompt-text">Inspect the current Vercel deployment and fix the 404 issue.
+
+The project is a static HTML/CSS/JS website with Vercel serverless API functions.
+
+Structure:
+api/
+  admissions.js
+  contact.js
+  notices.js
+
+frontend/
+  index.html
+  css/
+  js/
+  img/
+
+The repository root contains vercel.json.
+
+The previous Vercel deployment incorrectly used the VitePress application preset and returned 404 NOT_FOUND.
+
+Please:
+1. Change the Vercel framework/preset configuration to a generic/static deployment, not VitePress.
+2. Keep Root Directory as the repository root "./".
+3. Inspect the existing vercel.json.
+4. Ensure "/" serves frontend/index.html.
+5. Ensure /css/*, /js/* and /img/* serve the corresponding frontend assets.
+6. Keep /api/notices, /api/admissions and /api/contact working.
+7. Do not move or delete frontend, api, or backend.
+8. Do not change unrelated application code.
+9. Verify the deployment configuration before committing.
+10. Explain exactly what was changed.</div>
+    <span class="prompt-tag">Mentor Assignment Task &bull; Vercel Architecture Fix</span>
+  </div>
+
+  <div class="prompt-card config">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 19</span>
+      <span class="prompt-time">2026-09-06 21:26 IST</span>
+    </div>
+    <div class="prompt-text">[Uploaded screenshot showing Application Preset changed to "Other" and Root Directory as "./"]</div>
+    <span class="prompt-tag">Vercel UI Settings Confirmation</span>
+  </div>
+
+  <div class="prompt-card config">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 20</span>
+      <span class="prompt-time">2026-09-06 21:30 IST</span>
+    </div>
+    <div class="prompt-text">still getting error 404</div>
+    <span class="prompt-tag">CleanUrls Conflict Discovery</span>
+  </div>
+
+  <div class="prompt-card config">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 21</span>
+      <span class="prompt-time">2026-09-06 21:38 IST</span>
+    </div>
+    <div class="prompt-text">could you give me the prompt i have pasted here. since it is my assignment. my mentor will ask me.</div>
+    <span class="prompt-tag">Assignment Record Retrieval</span>
+  </div>
+
+  <div class="prompt-card config">
+    <div class="prompt-header">
+      <span class="prompt-num">PROMPT 22</span>
+      <span class="prompt-time">2026-09-06 21:39 IST</span>
+    </div>
+    <div class="prompt-text">i need all the prompy from the beginning of this project to end. all the prompts i =f you can give it as a pdf thats also fine</div>
+    <span class="prompt-tag">Complete History Documentation Request</span>
+  </div>
+
+</div>
+
+</body>
+</html>
