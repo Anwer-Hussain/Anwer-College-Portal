@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1788706910142,
+    "applicationId": "ACET-2026-5550",
+    "submittedAt": "2026-09-06T15:01:50.142Z",
+    "status": "Verified Submission",
+    "fullName": "anwer",
+    "email": "anwer@gmail.com",
+    "phone": "9376877393",
+    "department": "Artificial Intelligence and Data Science",
+    "marksPercentage": "89%",
+    "quota": "TNEA Single Window Counseling",
+    "message": "tesstt"
+  },
+  {
+    "id": 1788706452947,
+    "applicationId": "ACET-2026-3217",
+    "submittedAt": "2026-09-06T14:54:12.947Z",
+    "status": "Verified Submission",
+    "fullName": "anwer hussain",
+    "email": "anweranwercr@gmail.com",
+    "phone": "9629998384",
+    "department": "Computer Science and Engineering",
+    "marksPercentage": "80%",
+    "quota": "Direct Management Quota",
+    "message": "adminstion kedaikuma"
+  },
+  {
+    "id": 1788701277460,
+    "applicationId": "ACET-2026-9470",
+    "submittedAt": "2026-09-06T13:27:57.460Z",
+    "status": "Verified Submission",
+    "fullName": "Karthik S",
+    "email": "karthik@example.com",
+    "phone": "9876543210",
+    "department": "Computer Science and Engineering",
+    "marksPercentage": "94.2%",
+    "quota": "TNEA Counseling",
+    "message": "Testing college portal"
+  }
+]

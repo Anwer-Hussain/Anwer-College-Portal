@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "date": "2026-09-05",
+    "category": "Examinations",
+    "title": "End Semester Theory Examinations (Nov/Dec 2026) Schedule & Hall Allocation",
+    "body": "The final timetable and hall allocations for Anna University autonomous end-semester examinations have been published. Hall tickets can be collected from respective department offices starting 12 September.",
+    "isNew": true,
+    "fileSize": "420 KB PDF"
+  },
+  {
+    "id": 2,
+    "date": "2026-09-02",
+    "category": "Admissions",
+    "title": "B.Tech & B.E. Lateral Entry Admissions 2026-27 (Round 2 Merit List)",
+    "body": "Selected candidates for direct second-year engineering admission under merit quota are requested to report to the Central Auditorium with original documents before 20 September.",
+    "isNew": true,
+    "fileSize": "610 KB PDF"
+  },
+  {
+    "id": 3,
+    "date": "2026-08-28",
+    "category": "Placements",
+    "title": "Mega On-Campus Recruitment Drive 2026: Amazon, TCS & Cognizant",
+    "body": "Eligible final-year students (CSE, IT, ECE, MECH) with CGPA > 7.0 and no active standing arrears can register for Day-1 virtual coding assessment through the Training & Placement portal.",
+    "isNew": true,
+    "fileSize": "350 KB PDF"
+  },
+  {
+    "id": 4,
+    "date": "2026-08-22",
+    "category": "Events",
+    "title": "National Technical Symposium \"KURAL 2026\" & Hackathon Registrations Open",
+    "body": "The Department of Computer Science & Engineering invites technical paper submissions, web-a-thons, and robotics challenges. Cash prizes worth ₹1,50,000 to be won. Teams of up to 4 can register.",
+    "isNew": false,
+    "fileSize": "1.2 MB PDF"
+  },
+  {
+    "id": 5,
+    "date": "2026-08-15",
+    "category": "Scholarships",
+    "title": "Merit-cum-Means & First Graduate Scholarships 2026-27 Notification",
+    "body": "Applications are invited from eligible students for Tamil Nadu State Post-Matric and Anwer Merit Scholarship schemes. Submit duly signed forms at the administrative block counter 4.",
+    "isNew": false,
+    "fileSize": "280 KB PDF"
+  },
+  {
+    "id": 6,
+    "date": "2026-08-10",
+    "category": "Campus",
+    "title": "Central Digital Library 24/7 Reading Hall Facility during Exam Preparation",
+    "body": "The Air-Conditioned Digital Learning Resource Centre and IEEE Xplore access terminal will remain open until midnight throughout the examination preparation cycle.",
+    "isNew": false,
+    "fileSize": "190 KB PDF"
+  }
+]

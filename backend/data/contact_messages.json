@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1788706862335,
+    "ticketId": "MSG-2026-7614",
+    "submittedAt": "2026-09-06T15:01:02.335Z",
+    "name": "anwer",
+    "email": "anweranwer12@gmail.com",
+    "phone": "9683830209",
+    "subject": "Hostel & Facilities",
+    "message": "testt"
+  },
+  {
+    "id": 1788706305392,
+    "ticketId": "MSG-2026-6627",
+    "submittedAt": "2026-09-06T14:51:45.392Z",
+    "name": "Mohammed Farhan",
+    "email": "farhan@gmail.com",
+    "phone": "9876543210",
+    "subject": "Admission Enquiry",
+    "message": "Testing contact form email delivery to meerananwer12@gmail.com."
+  },
+  {
+    "id": 1725619300000,
+    "submittedAt": "2026-09-02T11:00:00.000Z",
+    "ticketId": "MSG-2026-0101",
+    "name": "Kavitha Sundaram",
+    "email": "kavitha.s@gmail.com",
+    "phone": "9840123456",
+    "subject": "Admissions Inquiry",
+    "message": "Could you provide information regarding the cutoff marks for AI & Data Science under government counseling?"
+  }
+]

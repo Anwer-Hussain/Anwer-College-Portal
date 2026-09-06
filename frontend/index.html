@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anwer College of Engineering and Technology | Autonomous Institution</title>
+  <meta name="description" content="Anwer College of Engineering and Technology (Autonomous), Kanchipuram. 27+ years of academic excellence, Anna University affiliated, NAAC 'A' Grade, 94.8% placement record.">
+  <meta name="keywords" content="Anwer College, ACET, Engineering College Kanchipuram, Anna University Autonomous, B.Tech Admissions 2026, Computer Science Engineering">
+
+  <!-- Google Fonts: Plus Jakarta Sans for UI + Outfit & Cinzel for Collegiate Headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logo.jpg" type="image/jpeg">
+</head>
+<body id="top">
+
+  <!-- Top Announcement Bulletin Ticker -->
+  <aside class="top-bar" aria-label="Announcement Bar">
+    <div class="top-bar__inner">
+      <div class="ticker-badge">
+        <span class="pulsing-dot"></span>
+        <span class="ticker-label">LATEST NOTICES</span>
+      </div>
+      <div class="ticker-viewport">
+        <div class="ticker-track" id="announcementTicker">
+          <span>🔥 Admissions Open for 2026–27 B.E. / B.Tech & Direct 2nd Year Lateral Entry • Apply Online</span>
+          <span>🏆 Re-accredited with NAAC 'A' Grade (CGPA 3.42) • NBA Accredited UG Programs</span>
+          <span>💼 2025–26 Placement Drive: 850+ Offers Made • Highest Package ₹28.0 LPA • 120+ Recruiter Partners</span>
+          <span>📢 Anna University Autonomous End Semester Examination Timetable Released • Download Circular</span>
+        </div>
+      </div>
+      <div class="top-bar__links">
+        <a href="#notices" class="top-link">Notices</a>
+        <a href="#fee-calculator" class="top-link">Fee Estimator</a>
+        <button type="button" class="admin-chip-btn" id="openAdminBtn" title="View Submitted Admission Records (Demo Mode)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Admin Portal <span class="badge-count" id="adminCountBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Collegiate Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__container">
+      <a class="site-header__brand" href="#top" aria-label="Anwer College of Engineering and Technology Home">
+        <img class="brand-crest" src="img/logo.jpg" alt="Anwer College Crest Logo">
+        <div class="brand-titles">
+          <span class="brand-name">ANWER COLLEGE</span>
+          <span class="brand-sub">OF ENGINEERING &amp; TECHNOLOGY</span>
+          <span class="brand-meta">Autonomous • Affiliated to Anna University • Estd. 1998</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="site-nav" id="primaryNav" aria-label="Main Navigation">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#academics" class="nav-item">Academics</a>
+        <a href="#notices" class="nav-item">Notices</a>
+        <a href="#fee-calculator" class="nav-item">Fee Estimator</a>
+        <a href="#placements" class="nav-item">Placements</a>
+        <a href="#faculty" class="nav-item">Faculty</a>
+        <a href="#campus" class="nav-item">Campus Life</a>
+        <a href="#contact" class="nav-item">Contact</a>
+        <a href="#admissions" class="nav-cta-btn">Apply 2026</a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle Navigation Menu">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+        <span class="bar bar-3"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-backdrop-glow"></div>
+      <div class="hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-pill-tag">
+            <span class="pill-sparkle">★</span>
+            <span>NAAC 'A' Grade Accredited • Autonomous Engineering Excellence</span>
+          </div>
+
+          <h1 class="hero-title">
+            Engineering Education Built for the <span class="highlight-text">Builders of Tomorrow</span>.
+          </h1>
+
+          <p class="hero-subtitle">
+            Welcome to Anwer College of Engineering and Technology (ACET). Located on a state-of-the-art 22-acre tech campus near Kanchipuram, offering 5 NBA-accredited disciplines, advanced AI &amp; IoT R&amp;D centres, and high-impact industry placements.
+          </p>
+
+          <!-- Admission 2026 Countdown Box -->
+          <div class="admission-countdown-card">
+            <div class="countdown-header">
+              <span class="countdown-pulse"></span>
+              <strong>Admissions 2026–27 Priority Round Closes In:</strong>
+            </div>
+            <div class="countdown-timer" id="admissionCountdown">
+              <div class="timer-box"><span class="timer-num" id="cdDays">18</span><span class="timer-unit">Days</span></div>
+              <span class="timer-colon">:</span>
+              <div class="timer-box"><span class="timer-num" id="cdHours">14</span><span class="timer-unit">Hours</span></div>
+              <span class="timer-colon">:</span>
+              <div class="timer-box"><span class="timer-num" id="cdMins">45</span><span class="timer-unit">Mins</span></div>
+              <span class="timer-colon">:</span>
+              <div class="timer-box"><span class="timer-num" id="cdSecs">20</span><span class="timer-unit">Secs</span></div>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <a href="#admissions" class="btn btn--primary btn--glow">
+              <span>Start Admission Enquiry</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#academics" class="btn btn--secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <span>Explore Departments</span>
+            </a>
+            <button type="button" class="btn btn--outline" id="btnDownloadBrochure">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Prospectus 2026</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-frame">
+            <img src="img/campus-heritage.jpg" alt="Anwer College Main Academic Heritage Block" class="hero-main-img">
+            <div class="visual-badge visual-badge--top">
+              <span class="visual-badge-icon">🏛️</span>
+              <div>
+                <strong>22-Acre Campus</strong>
+                <span>Green Eco Infrastructure</span>
+              </div>
+            </div>
+            <div class="visual-badge visual-badge--bottom">
+              <span class="visual-badge-icon">⭐</span>
+              <div>
+                <strong>Top 10 Rank Holders</strong>
+                <span>Anna University Autonomous</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Action Cards Strip -->
+      <div class="hero-quick-cards">
+        <a href="#fee-calculator" class="quick-card">
+          <div class="quick-card__icon" style="--accent: #2563EB;">💰</div>
+          <div class="quick-card__text">
+            <strong>Fee &amp; Scholarship Estimator</strong>
+            <span>Calculate fees &amp; merit discount</span>
+          </div>
+          <span class="quick-card__arrow">&rarr;</span>
+        </a>
+        <a href="#notices" class="quick-card">
+          <div class="quick-card__icon" style="--accent: #F59E0B;">📢</div>
+          <div class="quick-card__text">
+            <strong>Live Notice Board</strong>
+            <span>Exam dates &amp; circulars</span>
+          </div>
+          <span class="quick-card__arrow">&rarr;</span>
+        </a>
+        <a href="#placements" class="quick-card">
+          <div class="quick-card__icon" style="--accent: #10B981;">💼</div>
+          <div class="quick-card__text">
+            <strong>Placement Report 2026</strong>
+            <span>120+ Top Recruiters &amp; Stats</span>
+          </div>
+          <span class="quick-card__arrow">&rarr;</span>
+        </a>
+        <a href="#admissions" class="quick-card">
+          <div class="quick-card__icon" style="--accent: #D42E6E;">✍️</div>
+          <div class="quick-card__text">
+            <strong>Lateral Entry &amp; B.Tech</strong>
+            <span>Instant Application Portal</span>
+          </div>
+          <span class="quick-card__arrow">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Hero Key Stats Strip -->
+      <div class="stats-ribbon">
+        <div class="stat-cell">
+          <span class="stat-number" data-target="27">27+</span>
+          <span class="stat-caption">Years of Excellence</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-number" data-target="94.8">94.8%</span>
+          <span class="stat-caption">Placement Rate</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-number" data-target="28">₹28 LPA</span>
+          <span class="stat-caption">Highest Package Offered</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-number" data-target="120">120+</span>
+          <span class="stat-caption">Corporate Hiring Partners</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-number" data-target="40000">40,000+</span>
+          <span class="stat-caption">Central Library Volumes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section section--about" id="about">
+      <div class="container">
+        <div class="section-badge">ABOUT ACET</div>
+        <h2 class="section-title">A Legacy of Quality Engineering &amp; Innovation</h2>
+        <p class="section-lead">
+          Founded in 1998 by the Anwer Educational Trust, Anwer College of Engineering and Technology (ACET) has grown from a humble institution into an autonomous academic powerhouse. Affiliated with Anna University and accredited by NAAC with an 'A' Grade, ACET is committed to bridging the gap between rigorous technical fundamentals and industry demand.
+        </p>
+
+        <div class="about-cards-grid">
+          <article class="feature-card">
+            <div class="feature-card__icon">🎯</div>
+            <h3>Our Vision</h3>
+            <p>To be universally recognised as a benchmark institution producing ethically grounded, technically agile engineers and entrepreneurs who solve global real-world challenges.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon">🚀</div>
+            <h3>Our Mission</h3>
+            <p>Deliver experiential project-based pedagogy, maintain industry-synced advanced laboratories, and nurture an environment of curiosity, multidisciplinary research, and lifelong learning.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon">🏅</div>
+            <h3>Autonomous Autonomy</h3>
+            <p>Conferred autonomous status by UGC &amp; Anna University since 2018. Enables contemporary industry-oriented syllabus revisions, continuous internal evaluations, and modern electives.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon">🔬</div>
+            <h3>R&amp;D &amp; Incubation</h3>
+            <p>Dedicated MSME-recognised innovation hub, 8 sponsored research grants, and 5 Indian patents published across sustainable construction, low-power VLSI, and intelligent autonomous systems.</p>
+          </article>
+        </div>
+
+        <!-- Leadership Showcase with Automatic Motion & Mouse Wheel Scroll -->
+        <div class="leadership-block">
+          <div class="leadership-block__header">
+            <div>
+              <span class="sub-pill">VISIONARY GOVERNANCE</span>
+              <h3 class="subsection-title">College Leadership &amp; Administration</h3>
+            </div>
+            <p class="leadership-desc">Guided by renowned educationists, seasoned researchers, and visionary academic leaders. Scroll mouse or swipe to browse.</p>
+          </div>
+
+          <div class="leadership-slider-wrapper">
+            <div class="leadership-slider" id="leadershipSlider">
+              <div class="leadership-track" id="leadershipTrack">
+                <!-- Leader 1: Highest Leadership -->
+                <div class="leader-item">
+                  <div class="leader-img-wrapper">
+                    <img src="img/leadership/anwer-hussain.jpeg" alt="Mr. Anwer Hussain S S">
+                  </div>
+                  <h4>Mr. Anwer Hussain S S</h4>
+                  <span class="leader-role">Founder &amp; Chairman</span>
+                  <p class="leader-bio">Visionary founder and chief patron dedicated to pioneering next-generation engineering education, modern research, and youth empowerment.</p>
+                </div>
+
+                <!-- Leader 2: Principal -->
+                <div class="leader-item">
+                  <div class="leader-img-wrapper">
+                    <img src="img/leadership/ajmal-khan.jpeg" alt="Dr. Ajmal Khan">
+                  </div>
+                  <h4>Dr. Ajmal Khan</h4>
+                  <span class="leader-role">Principal &amp; Director</span>
+                  <p class="leader-bio">Ph.D in Engineering with 22+ years in academic governance, leading autonomous curriculum, NBA/NAAC accreditation, and university alliances.</p>
+                </div>
+
+                <!-- Leader 3: Vice Principal -->
+                <div class="leader-item">
+                  <div class="leader-img-wrapper">
+                    <img src="img/leadership/shameera-fathima.jpeg" alt="Dr. Shameera Fathima">
+                  </div>
+                  <h4>Dr. Shameera Fathima</h4>
+                  <span class="leader-role">Vice Principal &amp; Dean Academics</span>
+                  <p class="leader-bio">Championing outcome-based education, continuous internal quality improvement, curriculum design, and faculty enrichment programs.</p>
+                </div>
+
+                <!-- Leader 4: Dean Research -->
+                <div class="leader-item">
+                  <div class="leader-img-wrapper">
+                    <img src="img/leadership/thameem-basha.jpeg" alt="Dr. Thameem Basha">
+                  </div>
+                  <h4>Dr. Thameem Basha</h4>
+                  <span class="leader-role">Dean, Research &amp; Innovation</span>
+                  <p class="leader-bio">Spearheading funded R&amp;D projects, patents, international research grants, industry tie-ups, and student startup incubation.</p>
+                </div>
+
+                <!-- Leader 5: Director Placements -->
+                <div class="leader-item">
+                  <div class="leader-img-wrapper">
+                    <img src="img/leadership/ridha-fathima.jpeg" alt="Dr. Ridha Fathima">
+                  </div>
+                  <h4>Dr. Ridha Fathima</h4>
+                  <span class="leader-role">Director, Placements &amp; Student Affairs</span>
+                  <p class="leader-bio">Driving 120+ corporate recruiter partnerships, international career opportunities, and vibrant student technical societies.</p>
+                </div>
+
+                <!-- Duplicate set for seamless infinite auto-scroll & mouse scroll -->
+                <div class="leader-item" aria-hidden="true">
+                  <div class="leader-img-wrapper">
+                    <img src="img/leadership/anwer-hussain.jpeg" alt="">
+                  </div>
+                  <h4>Mr. Anwer Hussain S S</h4>
+                  <span class="leader-role">Founder &amp; Chairman</span>
+                  <p class="leader-bio">Visionary founder and chief patron dedicated to pioneering next-generation engineering education, modern research, and youth empowerment.</p>
+                </div>
+
+                <div class="leader-item" aria-hidden="true">
+                  <div class="leader-img-wrapper">
+                    <img src="img/leadership/ajmal-khan.jpeg" alt="">
+                  </div>
+                  <h4>Dr. Ajmal Khan</h4>
+                  <span class="leader-role">Principal &amp; Director</span>
+                  <p class="leader-bio">Ph.D in Engineering with 22+ years in academic governance, leading autonomous curriculum, NBA/NAAC accreditation, and university alliances.</p>
+                </div>
+
+                <div class="leader-item" aria-hidden="true">
+                  <div class="leader-img-wrapper">
+                    <img src="img/leadership/shameera-fathima.jpeg" alt="">
+                  </div>
+                  <h4>Dr. Shameera Fathima</h4>
+                  <span class="leader-role">Vice Principal &amp; Dean Academics</span>
+                  <p class="leader-bio">Championing outcome-based education, continuous internal quality improvement, curriculum design, and faculty enrichment programs.</p>
+                </div>
+
+                <div class="leader-item" aria-hidden="true">
+                  <div class="leader-img-wrapper">
+                    <img src="img/leadership/thameem-basha.jpeg" alt="">
+                  </div>
+                  <h4>Dr. Thameem Basha</h4>
+                  <span class="leader-role">Dean, Research &amp; Innovation</span>
+                  <p class="leader-bio">Spearheading funded R&amp;D projects, patents, international research grants, industry tie-ups, and student startup incubation.</p>
+                </div>
+
+                <div class="leader-item" aria-hidden="true">
+                  <div class="leader-img-wrapper">
+                    <img src="img/leadership/ridha-fathima.jpeg" alt="">
+                  </div>
+                  <h4>Dr. Ridha Fathima</h4>
+                  <span class="leader-role">Director, Placements &amp; Student Affairs</span>
+                  <p class="leader-bio">Driving 120+ corporate recruiter partnerships, international career opportunities, and vibrant student technical societies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACADEMICS & DEPARTMENTS -->
+    <section class="section section--academics" id="academics">
+      <div class="container">
+        <div class="section-badge">PROGRAMMES OFFERED</div>
+        <h2 class="section-title">Academic Departments &amp; Specialisations</h2>
+        <p class="section-lead">
+          Our undergraduate engineering degree programs are meticulously structured with industry-relevant electives, hands-on laboratory modules, capstone internships, and global certifications.
+        </p>
+
+        <!-- Department Filter Tabs -->
+        <div class="dept-filters" id="deptFilterButtons">
+          <button type="button" class="filter-btn is-active" data-filter="all">All Disciplines</button>
+          <button type="button" class="filter-btn" data-filter="computing">Computing &amp; IT</button>
+          <button type="button" class="filter-btn" data-filter="circuits">Electrical &amp; Electronics</button>
+          <button type="button" class="filter-btn" data-filter="core">Core Mechanical &amp; Civil</button>
+        </div>
+
+        <div class="departments-grid" id="deptCardsContainer">
+          
+          <!-- CSE -->
+          <article class="dept-card" data-category="computing">
+            <div class="dept-card__header">
+              <span class="dept-badge nba">NBA Accredited</span>
+              <span class="dept-seats">Intake: 120 Seats</span>
+            </div>
+            <h3>B.E. Computer Science and Engineering</h3>
+            <p class="dept-desc">Master software architecture, full-stack systems, cloud engineering, cybersecurity, and algorithms with high-performance computing clusters.</p>
+            <ul class="dept-perks">
+              <li><strong>Labs:</strong> AI/ML Supercomputing Lab, Cloud DevOps Suite</li>
+              <li><strong>Top Placement:</strong> ₹28 LPA (Amazon, Microsoft)</li>
+              <li><strong>Student Club:</strong> Turing Coding Guild &amp; Kural Hackathon</li>
+            </ul>
+            <div class="dept-card__footer">
+              <button type="button" class="btn-syllabus" data-dept="cse">View Syllabus &amp; Labs &rarr;</button>
+              <a href="#admissions" class="btn-dept-apply" data-dept-name="Computer Science and Engineering">Apply Now</a>
+            </div>
+          </article>
+
+          <!-- AI & DS -->
+          <article class="dept-card" data-category="computing">
+            <div class="dept-card__header">
+              <span class="dept-badge emerging">Emerging Tech</span>
+              <span class="dept-seats">Intake: 60 Seats</span>
+            </div>
+            <h3>B.Tech Artificial Intelligence &amp; Data Science</h3>
+            <p class="dept-desc">Focuses on deep learning, predictive modelling, generative AI, natural language processing, big data analytics, and real-time computer vision.</p>
+            <ul class="dept-perks">
+              <li><strong>Labs:</strong> Deep Learning Tensor Lab, Big Data Sandbox</li>
+              <li><strong>Top Placement:</strong> ₹24 LPA (TCS R&amp;D, Mu Sigma)</li>
+              <li><strong>Student Club:</strong> DataSphere Kaggle Chapter</li>
+            </ul>
+            <div class="dept-card__footer">
+              <button type="button" class="btn-syllabus" data-dept="aids">View Syllabus &amp; Labs &rarr;</button>
+              <a href="#admissions" class="btn-dept-apply" data-dept-name="Artificial Intelligence and Data Science">Apply Now</a>
+            </div>
+          </article>
+
+          <!-- ECE -->
+          <article class="dept-card" data-category="circuits">
+            <div class="dept-card__header">
+              <span class="dept-badge nba">NBA Accredited</span>
+              <span class="dept-seats">Intake: 120 Seats</span>
+            </div>
+            <h3>B.E. Electronics and Communication Engineering</h3>
+            <p class="dept-desc">Bridge silicon chip design and wireless communication. Covers VLSI systems, embedded firmware, 5G signal processing, and smart IoT devices.</p>
+            <ul class="dept-perks">
+              <li><strong>Labs:</strong> Cadence VLSI EDA Lab, Texas Instruments IoT Suite</li>
+              <li><strong>Top Placement:</strong> ₹18 LPA (Qualcomm, Bosch)</li>
+              <li><strong>Student Club:</strong> Amateur HAM Radio &amp; Robotics Chapter</li>
+            </ul>
+            <div class="dept-card__footer">
+              <button type="button" class="btn-syllabus" data-dept="ece">View Syllabus &amp; Labs &rarr;</button>
+              <a href="#admissions" class="btn-dept-apply" data-dept-name="Electronics and Communication Engineering">Apply Now</a>
+            </div>
+          </article>
+
+          <!-- IT -->
+          <article class="dept-card" data-category="computing">
+            <div class="dept-card__header">
+              <span class="dept-badge aicte">AICTE Approved</span>
+              <span class="dept-seats">Intake: 60 Seats</span>
+            </div>
+            <h3>B.Tech Information Technology</h3>
+            <p class="dept-desc">Tailored for modern enterprise IT infrastructure, distributed systems, mobile app ecosystems, network security, and database administration.</p>
+            <ul class="dept-perks">
+              <li><strong>Labs:</strong> Cisco Networking Academy, Full-Stack Incubator</li>
+              <li><strong>Top Placement:</strong> ₹16 LPA (Cognizant, Zoho)</li>
+              <li><strong>Student Club:</strong> CyberSec &amp; FOSS Community</li>
+            </ul>
+            <div class="dept-card__footer">
+              <button type="button" class="btn-syllabus" data-dept="it">View Syllabus &amp; Labs &rarr;</button>
+              <a href="#admissions" class="btn-dept-apply" data-dept-name="Information Technology">Apply Now</a>
+            </div>
+          </article>
+
+          <!-- MECH -->
+          <article class="dept-card" data-category="core">
+            <div class="dept-card__header">
+              <span class="dept-badge nba">NBA Accredited</span>
+              <span class="dept-seats">Intake: 60 Seats</span>
+            </div>
+            <h3>B.E. Mechanical Engineering</h3>
+            <p class="dept-desc">Combines classical mechanics with modern smart manufacturing, electric vehicle design, CNC robotics, computational fluid dynamics, and thermodynamics.</p>
+            <ul class="dept-perks">
+              <li><strong>Labs:</strong> SolidWorks CAD/CAM Centre, Mechatronics Lab</li>
+              <li><strong>Top Placement:</strong> ₹14 LPA (Larsen &amp; Toubro, Hyundai)</li>
+              <li><strong>Student Club:</strong> ACET Formula SAE Racing Team</li>
+            </ul>
+            <div class="dept-card__footer">
+              <button type="button" class="btn-syllabus" data-dept="mech">View Syllabus &amp; Labs &rarr;</button>
+              <a href="#admissions" class="btn-dept-apply" data-dept-name="Mechanical Engineering">Apply Now</a>
+            </div>
+          </article>
+
+          <!-- CIVIL -->
+          <article class="dept-card" data-category="core">
+            <div class="dept-card__header">
+              <span class="dept-badge aicte">AICTE Approved</span>
+              <span class="dept-seats">Intake: 60 Seats</span>
+            </div>
+            <h3>B.E. Civil Engineering</h3>
+            <p class="dept-desc">Designing resilient smart city infrastructure, sustainable green materials, geotechnical foundations, GIS mapping, and environmental sustainability.</p>
+            <ul class="dept-perks">
+              <li><strong>Labs:</strong> Structural Testing Bed, Advanced GIS Survey Station</li>
+              <li><strong>Top Placement:</strong> ₹12 LPA (L&amp;T Construction, Shapoorji)</li>
+              <li><strong>Student Club:</strong> Concrete Institute &amp; Green Builders</li>
+            </ul>
+            <div class="dept-card__footer">
+              <button type="button" class="btn-syllabus" data-dept="civil">View Syllabus &amp; Labs &rarr;</button>
+              <a href="#admissions" class="btn-dept-apply" data-dept-name="Civil Engineering">Apply Now</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE NOTICE BOARD SECTION -->
+    <section class="section section--notices" id="notices">
+      <div class="container">
+        <div class="notices-header-wrap">
+          <div>
+            <div class="section-badge">PORTAL ANNOUNCEMENTS</div>
+            <h2 class="section-title">Official Notice Board &amp; Circulars</h2>
+            <p class="section-lead">Synchronised in real-time with the college autonomous portal API.</p>
+          </div>
+
+          <!-- Notice Search Bar -->
+          <div class="notice-search-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="noticeSearchInput" placeholder="Search circulars, exams, symposiums..." aria-label="Search Notices">
+          </div>
+        </div>
+
+        <!-- Notice Category Filter Pills -->
+        <div class="notice-category-tabs" id="noticeCategoryTabs">
+          <button type="button" class="notice-tab is-active" data-cat="All">All Circulars</button>
+          <button type="button" class="notice-tab" data-cat="Examinations">Examinations</button>
+          <button type="button" class="notice-tab" data-cat="Admissions">Admissions</button>
+          <button type="button" class="notice-tab" data-cat="Placements">Placements</button>
+          <button type="button" class="notice-tab" data-cat="Events">Events &amp; Symposiums</button>
+          <button type="button" class="notice-tab" data-cat="Scholarships">Scholarships</button>
+        </div>
+
+        <!-- Notices Container -->
+        <div class="notices-container" id="noticesContainer">
+          <div class="notices-loading-state">
+            <div class="spinner"></div>
+            <span>Fetching live notices from college server...</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FEE & SCHOLARSHIP ESTIMATOR -->
+    <section class="section section--calculator" id="fee-calculator">
+      <div class="container">
+        <div class="calc-wrapper">
+          <div class="calc-info">
+            <div class="section-badge section-badge--gold">FINANCIAL TRANSPARENCY</div>
+            <h2 class="section-title">Admission Fee &amp; Scholarship Calculator</h2>
+            <p>
+              We believe in transparent, merit-rewarding education. Use our interactive estimator to calculate your estimated annual fee breakdown and discover eligible scholarships based on your 12th Board Examination marks.
+            </p>
+            
+            <div class="scholarship-tiers">
+              <div class="tier-card">
+                <span class="tier-badge gold">95% &amp; Above</span>
+                <strong>75% Tuition Fee Waiver</strong>
+                <span>Founder's Super-Merit Scholarship</span>
+              </div>
+              <div class="tier-card">
+                <span class="tier-badge blue">90% – 94.9%</span>
+                <strong>50% Tuition Fee Waiver</strong>
+                <span>Academic Excellence Scholarship</span>
+              </div>
+              <div class="tier-card">
+                <span class="tier-badge green">80% – 89.9%</span>
+                <strong>25% Tuition Fee Waiver</strong>
+                <span>Merit Encouragement Grant</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-box">
+            <h3 class="calc-box__title">Estimate Your Fees (2026–27)</h3>
+            
+            <div class="calc-form-group">
+              <label for="calcDept">Selected Engineering Branch</label>
+              <select id="calcDept">
+                <option value="cse">B.E. Computer Science and Engineering</option>
+                <option value="aids">B.Tech Artificial Intelligence &amp; Data Science</option>
+                <option value="ece">B.E. Electronics &amp; Communication Engineering</option>
+                <option value="it">B.Tech Information Technology</option>
+                <option value="mech">B.E. Mechanical Engineering</option>
+                <option value="civil">B.E. Civil Engineering</option>
+              </select>
+            </div>
+
+            <div class="calc-form-group">
+              <label for="calcQuota">Admission Quota</label>
+              <select id="calcQuota">
+                <option value="govt">Government Single Window Counseling (TNEA)</option>
+                <option value="mgmt">Management Quota (Direct Admission)</option>
+                <option value="lateral">Lateral Entry (Direct 2nd Year Diploma)</option>
+              </select>
+            </div>
+
+            <div class="calc-form-group">
+              <div class="calc-label-with-val">
+                <label for="calcMarks">12th Board / Diploma Aggregate Score</label>
+                <span class="marks-display" id="marksDisplay">88%</span>
+              </div>
+              <input type="range" id="calcMarks" min="50" max="100" value="88" step="1">
+            </div>
+
+            <div class="calc-checkbox-group">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="calcHostel">
+                <span class="checkmark"></span>
+                <span>Include Hostel Accommodation &amp; Mess Dining (+₹70,000/yr)</span>
+              </label>
+            </div>
+
+            <!-- Calculation Output Receipt -->
+            <div class="calc-output" id="calcOutput">
+              <div class="calc-row">
+                <span>Standard Annual Tuition Fee:</span>
+                <strong id="outTuition">₹85,000</strong>
+              </div>
+              <div class="calc-row discount-row" id="discountRow">
+                <span>Merit Scholarship Discount (25%):</span>
+                <strong id="outDiscount">-₹21,250</strong>
+              </div>
+              <div class="calc-row" id="hostelRow" style="display: none;">
+                <span>Hostel &amp; Mess Charges:</span>
+                <strong id="outHostel">₹70,000</strong>
+              </div>
+              <div class="calc-divider"></div>
+              <div class="calc-row total-row">
+                <span>Estimated Net Payable / Year:</span>
+                <strong class="total-amount" id="outTotal">₹63,750</strong>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn--primary btn--full" id="btnApplyWithCalc">
+              Apply with this Scholarship Rate &rarr;
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PLACEMENTS & RECRUITERS -->
+    <section class="section section--placements" id="placements">
+      <div class="container">
+        <div class="section-badge">CAREER ADVANCEMENT</div>
+        <h2 class="section-title">Industry Placements &amp; Corporate Partnerships</h2>
+        <p class="section-lead">
+          Our dedicated Training and Placement Cell works relentlessly to bridge students with high-tier tech giants, MNCs, and core engineering conglomerates.
+        </p>
+
+        <!-- Placement Stat Highlight Cards -->
+        <div class="placement-stats-grid">
+          <div class="p-stat-card">
+            <span class="p-stat-val">₹28.0 LPA</span>
+            <span class="p-stat-lbl">Highest International Package</span>
+            <span class="p-stat-sub">Offered by Amazon Web Services</span>
+          </div>
+          <div class="p-stat-card">
+            <span class="p-stat-val">₹6.8 LPA</span>
+            <span class="p-stat-lbl">Average Across All Branches</span>
+            <span class="p-stat-sub">34% Increase over 3 years</span>
+          </div>
+          <div class="p-stat-card">
+            <span class="p-stat-val">850+</span>
+            <span class="p-stat-lbl">Total Placement Offers</span>
+            <span class="p-stat-sub">Class of 2025–26</span>
+          </div>
+          <div class="p-stat-card">
+            <span class="p-stat-val">120+</span>
+            <span class="p-stat-lbl">Recruiting Companies</span>
+            <span class="p-stat-sub">Fortune 500 &amp; Tech Unicorns</span>
+          </div>
+        </div>
+
+        <!-- Recruiters Infinite Marquee -->
+        <div class="marquee-block">
+          <h3 class="marquee-title">Our Prestigious Recruiting Partners</h3>
+          <div class="marquee-wrapper">
+            <div class="marquee-content">
+              <span class="recruiter-pill">Google</span>
+              <span class="recruiter-pill">Microsoft</span>
+              <span class="recruiter-pill">Amazon</span>
+              <span class="recruiter-pill">TCS Digital</span>
+              <span class="recruiter-pill">Infosys</span>
+              <span class="recruiter-pill">Wipro Turbo</span>
+              <span class="recruiter-pill">Cognizant</span>
+              <span class="recruiter-pill">Accenture</span>
+              <span class="recruiter-pill">Zoho Corp</span>
+              <span class="recruiter-pill">Bosch</span>
+              <span class="recruiter-pill">Larsen &amp; Toubro</span>
+              <span class="recruiter-pill">HCLTech</span>
+              <span class="recruiter-pill">Capgemini</span>
+              <span class="recruiter-pill">Qualcomm</span>
+              <span class="recruiter-pill">Hyundai Motors</span>
+              <!-- Duplicate for seamless looping -->
+              <span class="recruiter-pill" aria-hidden="true">Google</span>
+              <span class="recruiter-pill" aria-hidden="true">Microsoft</span>
+              <span class="recruiter-pill" aria-hidden="true">Amazon</span>
+              <span class="recruiter-pill" aria-hidden="true">TCS Digital</span>
+              <span class="recruiter-pill" aria-hidden="true">Infosys</span>
+              <span class="recruiter-pill" aria-hidden="true">Wipro Turbo</span>
+              <span class="recruiter-pill" aria-hidden="true">Cognizant</span>
+              <span class="recruiter-pill" aria-hidden="true">Accenture</span>
+              <span class="recruiter-pill" aria-hidden="true">Zoho Corp</span>
+              <span class="recruiter-pill" aria-hidden="true">Bosch</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Placement Student Testimonials -->
+        <div class="alumni-testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">PK</div>
+              <div>
+                <strong>Priyanka K.</strong>
+                <span>B.E. CSE • Software Development Engineer at Amazon</span>
+              </div>
+            </div>
+            <p class="testimonial-quote">"The hands-on coding bootcamps and algorithmic problem-solving labs at ACET gave me the exact foundation needed to crack the technical rounds of Amazon."</p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">AR</div>
+              <div>
+                <strong>Arunachalam R.</strong>
+                <span>B.E. ECE • Embedded Systems Engineer at Bosch</span>
+              </div>
+            </div>
+            <p class="testimonial-quote">"Having 24/7 access to the VLSI and Texas Instruments IoT lab allowed our team to build hardware prototypes that impressed recruiters during the on-campus drive."</p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">SN</div>
+              <div>
+                <strong>Sneha N.</strong>
+                <span>B.Tech IT • Cloud Solutions Architect at TCS Digital</span>
+              </div>
+            </div>
+            <p class="testimonial-quote">"The faculty mentorship and pre-placement mock interviews prepared us mentally and technically. ACET ensures no student is left unprepared."</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FACULTY & RESEARCH SECTION -->
+    <section class="section section--faculty" id="faculty">
+      <div class="container">
+        <div class="section-badge">INTELLECTUAL CAPITAL</div>
+        <h2 class="section-title">Distinguished Faculty &amp; Research Scholars</h2>
+        <p class="section-lead">
+          Mentored by experienced doctorates, patent holders, and industry consultants who foster critical thinking and practical engineering acumen.
+        </p>
+
+        <div class="faculty-grid">
+          <!-- Faculty 1: Mohammed Faizal J (Cyber Security) -->
+          <article class="faculty-card">
+            <div class="faculty-card__media">
+              <img src="img/faculty/mohammed-faizal.jpeg" alt="Dr. Mohammed Faizal J" loading="lazy">
+              <span class="faculty-tag">16 Yrs Exp</span>
+            </div>
+            <h3>Dr. Mohammed Faizal J</h3>
+            <p class="faculty-role">Professor &amp; Head, Cyber Security &amp; Forensics</p>
+            <p class="faculty-spec">Ph.D in Cryptography &amp; Cyber Defense &middot; Certified Information Systems Auditor (CISA)</p>
+          </article>
+
+          <!-- Faculty 2: Jivan Karthec (Cloud) -->
+          <article class="faculty-card">
+            <div class="faculty-card__media">
+              <img src="img/faculty/jivan-karthec.jpeg" alt="Dr. Jivan Karthec" loading="lazy">
+              <span class="faculty-tag">15 Yrs Exp</span>
+            </div>
+            <h3>Dr. Jivan Karthec</h3>
+            <p class="faculty-role">Professor &amp; Dean, Cloud Computing &amp; Distributed Systems</p>
+            <p class="faculty-spec">Ph.D in Cloud Infrastructure &amp; Virtualization &middot; AWS Certified Solutions Architect</p>
+          </article>
+
+          <!-- Faculty 3: Ajihar Ali -->
+          <article class="faculty-card">
+            <div class="faculty-card__media">
+              <img src="img/faculty/ajihar-ali.jpeg" alt="Dr. Ajihar Ali" loading="lazy">
+              <span class="faculty-tag">14 Yrs Exp</span>
+            </div>
+            <h3>Dr. Ajihar Ali</h3>
+            <p class="faculty-role">Professor &amp; Head, Artificial Intelligence &amp; ML</p>
+            <p class="faculty-spec">Ph.D in Deep Neural Networks &amp; Computer Vision &middot; 26 Scopus Publications</p>
+          </article>
+
+          <!-- Faculty 4: Basith (Islamic Head) -->
+          <article class="faculty-card">
+            <div class="faculty-card__media">
+              <img src="img/faculty/Basith.jpeg" alt="Dr. Basith" loading="lazy">
+              <span class="faculty-tag">14 Yrs Exp</span>
+            </div>
+            <h3>Dr. Basith</h3>
+            <p class="faculty-role">Head, Department of Islamic Studies &amp; Moral Guidance</p>
+            <p class="faculty-spec">Ph.D in Islamic Studies &amp; Comparative Ethics &middot; Student Welfare &amp; Mentorship Chair</p>
+          </article>
+
+          <!-- Faculty 5: Manoj Kumar -->
+          <article class="faculty-card">
+            <div class="faculty-card__media">
+              <img src="img/faculty/manoj-kumar.jpeg" alt="Dr. Manoj Kumar" loading="lazy">
+              <span class="faculty-tag">18 Yrs Exp</span>
+            </div>
+            <h3>Dr. Manoj Kumar</h3>
+            <p class="faculty-role">Professor &amp; Head, Electronics &amp; VLSI Design</p>
+            <p class="faculty-spec">Ph.D in Low-Power Semiconductor Systems &middot; DST Project Investigator</p>
+          </article>
+
+          <!-- Faculty 6: Sahab Khan -->
+          <article class="faculty-card">
+            <div class="faculty-card__media">
+              <img src="img/faculty/sahab-khan.jpeg" alt="Dr. Sahab Khan" loading="lazy">
+              <span class="faculty-tag">11 Yrs Exp</span>
+            </div>
+            <h3>Dr. Sahab Khan</h3>
+            <p class="faculty-role">Associate Professor, IoT &amp; Embedded Automation</p>
+            <p class="faculty-spec">Ph.D in Autonomous Sensor Networks &amp; Robotics &middot; IEEE Senior Member</p>
+          </article>
+
+          <!-- Faculty 7: Sridhar -->
+          <article class="faculty-card">
+            <div class="faculty-card__media">
+              <img src="img/faculty/Sridhar.jpeg" alt="Dr. Sridhar" loading="lazy">
+              <span class="faculty-tag">17 Yrs Exp</span>
+            </div>
+            <h3>Dr. Sridhar</h3>
+            <p class="faculty-role">Professor &amp; Head, Smart Manufacturing &amp; CAD/CAM</p>
+            <p class="faculty-spec">Ph.D in Computational Mechanics &amp; Thermal Systems &middot; Indian Patent Holder</p>
+          </article>
+
+          <!-- Faculty 8: Syed Ali -->
+          <article class="faculty-card">
+            <div class="faculty-card__media">
+              <img src="img/faculty/syed-ali.jpeg" alt="Dr. Syed Ali" loading="lazy">
+              <span class="faculty-tag">13 Yrs Exp</span>
+            </div>
+            <h3>Dr. Syed Ali</h3>
+            <p class="faculty-role">Associate Professor, Structural &amp; Green Engineering</p>
+            <p class="faculty-spec">Ph.D in Sustainable Building Materials &amp; Geotech &middot; Certified Auditor</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CAMPUS LIFE & FACILITIES -->
+    <section class="section section--campus" id="campus">
+      <div class="container">
+        <div class="section-badge">CAMPUS ECOSYSTEM</div>
+        <h2 class="section-title">22-Acre Vibrant Campus Life &amp; Infrastructure</h2>
+        <p class="section-lead">Designed to nurture intellectual curiosity, physical fitness, and student wellbeing in a serene, eco-conscious setting.</p>
+
+        <!-- Main Campus Banner Image -->
+        <div class="campus-showcase-frame">
+          <img src="img/campus-modern.jpg" alt="Anwer College Student Activity Centre and Modern Campus" class="campus-showcase-img">
+          <div class="showcase-overlay">
+            <div class="showcase-text">
+              <h3>Integrated Student Activity &amp; Innovation Centre</h3>
+              <p>400-Seat Acoustic Auditorium, Indoor Sports Arena, Robotics Studio &amp; Tech Cafeteria.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="facilities-grid">
+          <div class="facility-card">
+            <div class="facility-icon">📚</div>
+            <h4>Digital Central Library</h4>
+            <p>Over 40,000 volumes, DELNET and IEEE Xplore digital access, open reading halls, and air-conditioned e-learning resource centre.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-icon">🏡</div>
+            <h4>Secure Campus Hostels</h4>
+            <p>Separate residential towers for boys and girls with RO purified water, Wi-Fi 6 connectivity, 24/7 security, and hygienic multi-cuisine mess.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-icon">🚌</div>
+            <h4>Fleet of 35+ AC Buses</h4>
+            <p>Convenient daily transportation connecting Chennai, Kanchipuram, Chengalpattu, Vellore, and surrounding districts.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-icon">🏏</div>
+            <h4>Sports &amp; Athletics Complex</h4>
+            <p>Full-size cricket ground, floodlit basketball and volleyball courts, athletic track, gymnasium, and inter-collegiate tournament host.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-icon">🎭</div>
+            <h4>Clubs &amp; Cultural Societies</h4>
+            <p>IEEE Student Branch, Rotaract Club, Literary Guild, Coding Club, and the flagship annual cultural mega-fest <em>Kural</em>.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-icon">🩺</div>
+            <h4>Health Centre &amp; Banking</h4>
+            <p>24/7 resident medical officer, emergency ambulance support, on-campus ATM, and subsidized stationery bookstore.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section class="section section--faq" id="faqs">
+      <div class="container">
+        <div class="section-badge">FREQUENTLY ASKED QUESTIONS</div>
+        <h2 class="section-title">Common Queries About Admissions &amp; Campus</h2>
+        
+        <div class="faq-accordion" id="faqAccordion">
+          
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>How can I apply for admissions under Government Quota (TNEA)?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Candidates can choose <strong>Anwer College of Engineering and Technology (TNEA Counseling Code: 1422)</strong> during the Tamil Nadu Engineering Admissions single-window counseling. Our admission desk is open 6 days a week to guide students through the choice-filling procedure.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Is hostel accommodation mandatory for outstation students?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Hostel accommodation is optional but highly recommended for students traveling from outside Kanchipuram and Chennai. We provide furnished rooms (2-sharing and 3-sharing), solar water heating, high-speed Wi-Fi, and nutritious vegetarian/non-vegetarian dining.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>What scholarships are available for meritorious and economic students?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>ACET offers up to 75% tuition fee waiver for students scoring 95%+ in their 12th board exams. Additionally, Government First Graduate scholarships, Post-Matric SC/ST grants, and sports excellence scholarships are actively facilitated.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>What is the eligibility criteria for Direct 2nd Year Lateral Entry?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Diploma holders in Engineering or B.Sc. degree holders with a minimum of 50% aggregate marks (45% for reserved categories) are eligible for direct admission into the 3rd semester across all engineering departments.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ADMISSION ENQUIRY FORM SECTION (WORKING MODEL) -->
+    <section class="section section--admissions" id="admissions">
+      <div class="container">
+        <div class="admission-grid-wrap">
+          
+          <div class="admission-info-col">
+            <div class="section-badge section-badge--accent">ADMISSION PORTAL 2026</div>
+            <h2 class="section-title">Submit an Admission Enquiry</h2>
+            <p class="section-lead">
+              Take the first step towards an engineering education that launches global careers. Complete the official enquiry form below, and our senior admission counselor will verify your eligibility and contact you within 24 hours.
+            </p>
+
+            <div class="helpline-card">
+              <h4>Admissions Helpline Office</h4>
+              <p><strong>Direct Line:</strong> +91 44 2726 8900 / 8901</p>
+              <p><strong>WhatsApp Support:</strong> +91 94440 12345</p>
+              <p><strong>Official Email:</strong> admissions@acet.ac.in</p>
+              <p><strong>Working Hours:</strong> Monday – Saturday (9:00 AM – 5:00 PM)</p>
+            </div>
+
+            <div class="verification-note">
+              <span class="v-icon">🔒</span>
+              <p>Your submission generates a unique <strong>Application Reference Number (e.g. ACET-2026-XXXX)</strong> tracked directly in our admissions database.</p>
+            </div>
+          </div>
+
+          <div class="admission-form-col">
+            <div class="form-card">
+              <h3 class="form-card__title">Candidate Enquiry Form</h3>
+              <p class="form-card__subtitle">All fields marked with <span class="req">*</span> are required for official processing.</p>
+
+              <form id="enquiryForm" class="academic-form" novalidate>
+                
+                <div class="form-group">
+                  <label for="fullName">Full Name of Student <span class="req">*</span></label>
+                  <input type="text" id="fullName" name="fullName" placeholder="e.g. Anandha Krishnan S" required minlength="3">
+                  <span class="field-error" data-error-for="fullName"></span>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="email">Email Address <span class="req">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="student@example.com" required>
+                    <span class="field-error" data-error-for="email"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone">10-Digit Mobile Number <span class="req">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. 9876543210" pattern="[6-9][0-9]{9}" required>
+                    <span class="field-error" data-error-for="phone"></span>
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="department">Preferred Branch <span class="req">*</span></label>
+                    <select id="department" name="department" required>
+                      <option value="" disabled selected>Select an Engineering Branch</option>
+                      <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+                      <option value="Artificial Intelligence and Data Science">Artificial Intelligence and Data Science</option>
+                      <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+                      <option value="Information Technology">Information Technology</option>
+                      <option value="Mechanical Engineering">Mechanical Engineering</option>
+                      <option value="Civil Engineering">Civil Engineering</option>
+                    </select>
+                    <span class="field-error" data-error-for="department"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="marksPercentage">12th / Diploma Score (%)</label>
+                    <input type="number" id="marksPercentage" name="marksPercentage" placeholder="e.g. 88.5" min="40" max="100" step="0.1">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="quota">Admission Route</label>
+                  <select id="quota" name="quota">
+                    <option value="TNEA Single Window Counseling">TNEA Single Window Counseling (Govt Quota)</option>
+                    <option value="Direct Management Quota">Direct Management Quota</option>
+                    <option value="Direct Lateral Entry (2nd Year)">Direct Lateral Entry (2nd Year)</option>
+                    <option value="Sports / NRI Quota">Sports / Special Quota</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Specific Query or Specialisation Interest</label>
+                  <textarea id="message" name="message" rows="3" placeholder="Tell us about your career aspirations, hostel requirements, or scholarship queries..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--submit" id="submitBtn">
+                  <span class="btn-text">Submit Official Enquiry</span>
+                  <span class="btn-spinner" aria-hidden="true"></span>
+                </button>
+
+                <div class="form-status-alert" id="formStatus" role="alert" aria-live="polite"></div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & LOCATION -->
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <div class="section-badge">CAMPUS LOCATION &amp; DIRECT CONTACT</div>
+        <h2 class="section-title">Reach Our Campus &amp; Administrative Office</h2>
+        <p class="section-lead">Have questions regarding autonomous curriculum, transfer admissions, or campus visits? Send an official message or connect with our helpdesk directly.</p>
+        
+        <div class="contact-cards-grid">
+          <div class="contact-box">
+            <div class="contact-icon">📍</div>
+            <h3>Campus Address</h3>
+            <p><strong>Anwer College of Engineering &amp; Technology</strong><br>
+            NH-48, Chennai–Bengaluru Highway,<br>
+            Kanchipuram &ndash; 631 502, Tamil Nadu, India.</p>
+          </div>
+
+          <div class="contact-box">
+            <div class="contact-icon">📞</div>
+            <h3>Direct Contact</h3>
+            <p><strong>General Enquiry:</strong> +91 44 2726 8900<br>
+            <strong>Admissions Desk:</strong> +91 44 2726 8901<br>
+            <strong>Email:</strong> principal@acet.ac.in</p>
+          </div>
+
+          <div class="contact-box">
+            <div class="contact-icon">⏱️</div>
+            <h3>Office Timings</h3>
+            <p><strong>Monday – Friday:</strong> 8:45 AM – 5:00 PM<br>
+            <strong>Saturday:</strong> 9:00 AM – 1:30 PM<br>
+            <strong>Campus Gate:</strong> 24/7 Monitored</p>
+          </div>
+        </div>
+
+        <!-- Interactive Contact & Directions Hub -->
+        <div class="contact-hub-grid">
+          <!-- Left: Campus Directions & Transport -->
+          <div class="contact-hub-card directions-card">
+            <h3>Campus Accessibility &amp; Transit</h3>
+            <p class="directions-intro">Strategically located along the Chennai-Bengaluru Industrial Corridor with seamless connectivity across Tamil Nadu.</p>
+            
+            <div class="transit-items">
+              <div class="transit-item">
+                <span class="transit-icon">🚆</span>
+                <div>
+                  <strong>Nearest Railway Stations</strong>
+                  <p>Kanchipuram Central (9 km) &middot; Chengalpattu Junction (32 km) &middot; Chennai Central (68 km)</p>
+                </div>
+              </div>
+              <div class="transit-item">
+                <span class="transit-icon">✈️</span>
+                <div>
+                  <strong>Chennai International Airport (MAA)</strong>
+                  <p>58 km via NH-48 Express Highway (Approx. 65 minutes drive)</p>
+                </div>
+              </div>
+              <div class="transit-item">
+                <span class="transit-icon">🚌</span>
+                <div>
+                  <strong>Institutional Transit Fleets</strong>
+                  <p>48 air-conditioned college buses operating across Chennai, Vellore, Tambaram, and Arakkonam.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="directions-actions">
+              <button type="button" class="btn btn--outline btn--sm" id="btnCopyAddress">
+                📋 Copy Official Address
+              </button>
+              <a href="https://maps.google.com/?q=Anwer+College+of+Engineering+and+Technology" target="_blank" rel="noopener" class="btn btn--secondary btn--sm">
+                🗺️ Open in Google Maps &nearr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Direct Message Contact Form (EmailJS Powered) -->
+          <div class="contact-hub-card message-form-card">
+            <div class="form-card-header">
+              <span class="emailjs-tag">⚡ EMAILJS LIVE SERVICE</span>
+              <h3>Send a Message to Admin Office</h3>
+              <p>Directly notifies the Principal &amp; Admissions Office at <strong>meerananwer12@gmail.com</strong>.</p>
+            </div>
+
+            <form id="contactForm" class="academic-form" novalidate>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="contactName">Your Name <span class="req">*</span></label>
+                  <input type="text" id="contactName" name="contactName" placeholder="e.g. Rahul Sharma" required minlength="2">
+                  <span class="field-error" data-error-for="contactName"></span>
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail">Email Address <span class="req">*</span></label>
+                  <input type="email" id="contactEmail" name="contactEmail" placeholder="e.g. rahul@example.com" required>
+                  <span class="field-error" data-error-for="contactEmail"></span>
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="contactPhone">Mobile Number</label>
+                  <input type="tel" id="contactPhone" name="contactPhone" placeholder="e.g. 9876543210">
+                </div>
+                <div class="form-group">
+                  <label for="contactSubject">Subject / Query Type <span class="req">*</span></label>
+                  <select id="contactSubject" name="contactSubject" required>
+                    <option value="" disabled selected>Select Subject</option>
+                    <option value="Admission Enquiry">Admission &amp; Cutoff Query</option>
+                    <option value="Fee & Scholarships">Fee Structure &amp; Scholarships</option>
+                    <option value="Academic Verification">Academic Verification / Transcript</option>
+                    <option value="Hostel & Facilities">Hostel Accommodation &amp; Buses</option>
+                    <option value="Industry Collaboration">Industry Partnership &amp; Recruitment</option>
+                    <option value="General Query">General Institutional Query</option>
+                  </select>
+                  <span class="field-error" data-error-for="contactSubject"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Message / Query Description <span class="req">*</span></label>
+                <textarea id="contactMessage" name="contactMessage" rows="3" placeholder="Write your enquiry or message here..." required minlength="5"></textarea>
+                <span class="field-error" data-error-for="contactMessage"></span>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--submit" id="contactSubmitBtn">
+                <span class="btn-text">Send Official Message</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+
+              <div class="form-status-alert" id="contactFormStatus" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <div class="footer-col brand-col">
+          <div class="footer-brand">
+            <img src="img/logo.jpg" alt="Anwer College Logo" class="footer-logo">
+            <div>
+              <span class="footer-brand-name">Anwer College of Engineering &amp; Technology</span>
+              <span class="footer-brand-sub">Autonomous Institution &middot; Estd. 1998</span>
+            </div>
+          </div>
+          <p class="footer-bio">
+            Recognised by the All India Council for Technical Education (AICTE), New Delhi. Affiliated to Anna University, Chennai. Accredited with 'A' Grade by NAAC.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn" class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Academic Programs</h4>
+          <ul class="footer-links">
+            <li><a href="#academics">Computer Science &amp; Engineering</a></li>
+            <li><a href="#academics">AI &amp; Data Science</a></li>
+            <li><a href="#academics">Electronics &amp; Communication</a></li>
+            <li><a href="#academics">Information Technology</a></li>
+            <li><a href="#academics">Mechanical Engineering</a></li>
+            <li><a href="#academics">Civil Engineering</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Student Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#notices">Exam Schedule &amp; Timetable</a></li>
+            <li><a href="#fee-calculator">Fee Estimator &amp; Scholarships</a></li>
+            <li><a href="#placements">Placement Statistics 2026</a></li>
+            <li><a href="#campus">Hostels &amp; Transport Routes</a></li>
+            <li><a href="#faqs">Admissions FAQ</a></li>
+            <li><a href="#admissions">Apply Online Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Software Project Demo</h4>
+          <p class="footer-demo-text">Built for Software Testing &amp; Web Engineering College Project. Ready for free Vercel deployment.</p>
+          <button type="button" class="btn btn--outline btn--sm" id="footerAdminBtn">
+            Open Admin Portal Demo &rarr;
+          </button>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Anwer College of Engineering and Technology. All rights reserved.</p>
+        <p class="tribute">Autonomous Engineering College &bull; Kanchipuram, Tamil Nadu</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK ACTIONS BAR -->
+  <div class="floating-actions">
+    <a href="#top" class="floating-btn scroll-top" id="scrollTopBtn" title="Back to Top" aria-label="Scroll to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+    </a>
+    <a href="#admissions" class="floating-btn apply-float" title="Instant Admission Form">
+      <span>Apply 2026</span>
+    </a>
+  </div>
+
+  <!-- INTERACTIVE MODAL: DEPARTMENT SYLLABUS & LABS -->
+  <div class="modal-overlay" id="syllabusModal" aria-hidden="true" role="dialog" aria-labelledby="modalDeptTitle">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <span class="modal-sub" id="modalDeptCategory">DEPARTMENT SYLLABUS</span>
+          <h3 class="modal-title" id="modalDeptTitle">Curriculum &amp; Laboratory Outline</h3>
+        </div>
+        <button type="button" class="modal-close" id="closeSyllabusModal" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modalDeptBody">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn--secondary btn--sm" id="closeSyllabusBtn">Close</button>
+        <a href="#admissions" class="btn btn--primary btn--sm" id="modalApplyBtn">Apply for this Branch</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE MODAL: ADMIN ENQUIRIES REVIEW DRAWER (MENTOR DEMO) -->
+  <div class="modal-overlay modal-overlay--admin" id="adminModal" aria-hidden="true" role="dialog" aria-labelledby="adminModalTitle">
+    <div class="modal-box modal-box--large">
+      <div class="modal-header">
+        <div class="admin-header-titles">
+          <div class="admin-badge">MENTOR EVALUATION PORTAL</div>
+          <h3 class="modal-title" id="adminModalTitle">Submitted Admission Enquiries</h3>
+          <p class="admin-sub">View and verify all candidate records received via the working admission portal.</p>
+        </div>
+        <button type="button" class="modal-close" id="closeAdminModal" aria-label="Close admin view">&times;</button>
+      </div>
+
+      <!-- EMAILJS LIVE CONFIGURATION PANEL -->
+      <div class="admin-emailjs-panel" id="adminEmailJsPanel">
+        <div class="emailjs-panel-header">
+          <div class="emailjs-panel-title">
+            <span class="emailjs-badge">LIVE EMAIL DISPATCH</span>
+            <h4>EmailJS Gmail Service Status</h4>
+          </div>
+          <span class="emailjs-status-pill connected" id="emailJsStatusPill">
+            <span class="status-dot"></span> Gmail: meerananwer12@gmail.com
+          </span>
+        </div>
+        <p class="emailjs-desc">
+          Enquiries and messages are dispatched directly to <strong>meerananwer12@gmail.com</strong> via Service <code>service_r67exzm</code>. Enter your EmailJS Template ID and Public Key below to activate instant delivery.
+        </p>
+        <div class="emailjs-fields-grid">
+          <div class="emailjs-field">
+            <label for="emailJsServiceId">Service ID</label>
+            <input type="text" id="emailJsServiceId" value="service_r67exzm" readonly class="input-readonly">
+          </div>
+          <div class="emailjs-field">
+            <label for="emailJsTemplateId">Template ID <span class="req">*</span></label>
+            <input type="text" id="emailJsTemplateId" value="template_1n0155w" placeholder="e.g. template_1n0155w">
+          </div>
+          <div class="emailjs-field">
+            <label for="emailJsPublicKey">Public Key (Account &gt; API Keys) <span class="req">*</span></label>
+            <input type="text" id="emailJsPublicKey" value="0WR6ahkACe6eHYlt0" placeholder="e.g. 0WR6ahkACe6eHYlt0">
+          </div>
+          <div class="emailjs-btn-wrap">
+            <button type="button" class="btn btn--primary btn--sm" id="btnSaveEmailJs">Save Keys</button>
+            <button type="button" class="btn btn--outline btn--sm" id="btnTestEmailJs">Send Test Email</button>
+          </div>
+        </div>
+        <div id="emailJsTestAlert" class="emailjs-alert" role="alert" style="display: none;"></div>
+      </div>
+
+      <!-- TABS: Admissions vs Contact Messages -->
+      <div class="admin-tabs-bar">
+        <button type="button" class="admin-tab-btn is-active" id="tabBtnAdmissions">
+          📋 Admission Enquiries (<span id="adminCountAdmissions">0</span>)
+        </button>
+        <button type="button" class="admin-tab-btn" id="tabBtnContacts">
+          ✉️ Campus Contact Messages (<span id="adminCountContacts">0</span>)
+        </button>
+      </div>
+
+      <div class="admin-controls-bar">
+        <div class="admin-search-wrap">
+          <input type="text" id="adminSearchInput" placeholder="Filter by candidate name, branch, phone..." aria-label="Filter submissions">
+        </div>
+        <div class="admin-actions-wrap">
+          <button type="button" class="btn btn--sm btn--outline" id="btnExportCsv">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Export to CSV
+          </button>
+          <button type="button" class="btn btn--sm btn--outline" id="btnResetDemoData">
+            Reset Demo Data
+          </button>
+        </div>
+      </div>
+
+      <div class="admin-table-container">
+        <!-- Admissions Table -->
+        <table class="admin-table" id="adminSubmissionsTable">
+          <thead>
+            <tr>
+              <th>App ID</th>
+              <th>Candidate Name</th>
+              <th>Department</th>
+              <th>Score</th>
+              <th>Contact Info</th>
+              <th>Status</th>
+              <th>Submitted At</th>
+            </tr>
+          </thead>
+          <tbody id="adminTableBody">
+            <!-- Populated via JavaScript -->
+          </tbody>
+        </table>
+
+        <!-- Contact Messages Table (hidden by default) -->
+        <table class="admin-table" id="adminContactsTable" style="display: none;">
+          <thead>
+            <tr>
+              <th>Ticket ID</th>
+              <th>Sender Name</th>
+              <th>Subject</th>
+              <th>Contact Info</th>
+              <th>Message Excerpt</th>
+              <th>Status</th>
+              <th>Received At</th>
+            </tr>
+          </thead>
+          <tbody id="adminContactsTableBody">
+            <!-- Populated via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="modal-footer admin-footer">
+        <span class="records-counter" id="recordsCounter">Showing 0 records</span>
+        <button type="button" class="btn btn--secondary btn--sm" id="closeAdminBtn">Close Admin View</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE MODAL: ADMISSION SUBMISSION CONFIRMATION SLIP -->
+  <div class="modal-overlay" id="confirmModal" aria-hidden="true" role="dialog" aria-labelledby="confirmTitle">
+    <div class="modal-box modal-box--confirm">
+      <div class="confirm-badge">SUCCESSFUL SUBMISSION</div>
+      <div class="confirm-icon">🎉</div>
+      <h3 class="modal-title" id="confirmTitle">Admission Enquiry Received!</h3>
+      <p class="confirm-sub">Your application has been logged into our autonomous college database.</p>
+
+      <div class="confirm-receipt" id="confirmReceipt">
+        <!-- Injected dynamically -->
+      </div>
+
+      <p class="confirm-note">
+        Our admissions committee will review your profile and reach out via phone/email within 24 hours.
+      </p>
+
+      <div class="confirm-actions">
+        <button type="button" class="btn btn--secondary btn--sm" id="btnPrintReceipt">Print / Save Receipt</button>
+        <button type="button" class="btn btn--primary btn--sm" id="closeConfirmModal">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- EmailJS Browser SDK (v4) -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Main Application Logic -->
+  <script src="js/main.js"></script>
+</body>
+</html>
