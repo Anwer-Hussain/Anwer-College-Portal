@@ -1097,102 +1097,47 @@
           </div>
         </div>
 
-        <!-- Interactive Contact & Directions Hub -->
-        <div class="contact-hub-grid">
-          <!-- Left: Campus Directions & Transport -->
-          <div class="contact-hub-card directions-card">
-            <h3>Campus Accessibility &amp; Transit</h3>
-            <p class="directions-intro">Strategically located along the Chennai-Bengaluru Industrial Corridor with seamless connectivity across Tamil Nadu.</p>
-            
-            <div class="transit-items">
-              <div class="transit-item">
-                <span class="transit-icon">🚆</span>
-                <div>
-                  <strong>Nearest Railway Stations</strong>
-                  <p>Kanchipuram Central (9 km) &middot; Chengalpattu Junction (32 km) &middot; Chennai Central (68 km)</p>
-                </div>
-              </div>
-              <div class="transit-item">
-                <span class="transit-icon">✈️</span>
-                <div>
-                  <strong>Chennai International Airport (MAA)</strong>
-                  <p>58 km via NH-48 Express Highway (Approx. 65 minutes drive)</p>
-                </div>
-              </div>
-              <div class="transit-item">
-                <span class="transit-icon">🚌</span>
-                <div>
-                  <strong>Institutional Transit Fleets</strong>
-                  <p>48 air-conditioned college buses operating across Chennai, Vellore, Tambaram, and Arakkonam.</p>
-                </div>
+        <!-- Campus Directions & Transit Overview -->
+        <div class="directions-full-card">
+          <div class="directions-header">
+            <h3>Campus Accessibility &amp; Transit Routes</h3>
+            <p class="directions-intro">Strategically located along the Chennai-Bengaluru Industrial Corridor (NH-48) with seamless road, rail, and flight connectivity across Tamil Nadu.</p>
+          </div>
+          
+          <div class="transit-items-grid">
+            <div class="transit-item">
+              <span class="transit-icon">🚆</span>
+              <div>
+                <strong>Nearest Railway Stations</strong>
+                <p>Kanchipuram Central (9 km) &middot; Chengalpattu Junction (32 km) &middot; Chennai Central (68 km)</p>
               </div>
             </div>
-
-            <div class="directions-actions">
-              <button type="button" class="btn btn--outline btn--sm" id="btnCopyAddress">
-                📋 Copy Official Address
-              </button>
-              <a href="https://maps.google.com/?q=Anwer+College+of+Engineering+and+Technology" target="_blank" rel="noopener" class="btn btn--secondary btn--sm">
-                🗺️ Open in Google Maps &nearr;
-              </a>
+            <div class="transit-item">
+              <span class="transit-icon">✈️</span>
+              <div>
+                <strong>Chennai International Airport (MAA)</strong>
+                <p>58 km via NH-48 Express Highway (Approx. 65 minutes drive)</p>
+              </div>
+            </div>
+            <div class="transit-item">
+              <span class="transit-icon">🚌</span>
+              <div>
+                <strong>Institutional Transit Fleets</strong>
+                <p>48 air-conditioned college buses operating across Chennai, Vellore, Tambaram, and Arakkonam.</p>
+              </div>
             </div>
           </div>
 
-          <!-- Right: Direct Message Contact Form (EmailJS Powered) -->
-          <div class="contact-hub-card message-form-card">
-            <div class="form-card-header">
-              <span class="emailjs-tag">⚡ EMAILJS LIVE SERVICE</span>
-              <h3>Send a Message to Admin Office</h3>
-              <p>Directly notifies the Principal &amp; Admissions Office at <strong>meerananwer12@gmail.com</strong>.</p>
-            </div>
-
-            <form id="contactForm" class="academic-form" novalidate>
-              <div class="form-row-2">
-                <div class="form-group">
-                  <label for="contactName">Your Name <span class="req">*</span></label>
-                  <input type="text" id="contactName" name="contactName" placeholder="e.g. Rahul Sharma" required minlength="2">
-                  <span class="field-error" data-error-for="contactName"></span>
-                </div>
-                <div class="form-group">
-                  <label for="contactEmail">Email Address <span class="req">*</span></label>
-                  <input type="email" id="contactEmail" name="contactEmail" placeholder="e.g. rahul@example.com" required>
-                  <span class="field-error" data-error-for="contactEmail"></span>
-                </div>
-              </div>
-
-              <div class="form-row-2">
-                <div class="form-group">
-                  <label for="contactPhone">Mobile Number</label>
-                  <input type="tel" id="contactPhone" name="contactPhone" placeholder="e.g. 9876543210">
-                </div>
-                <div class="form-group">
-                  <label for="contactSubject">Subject / Query Type <span class="req">*</span></label>
-                  <select id="contactSubject" name="contactSubject" required>
-                    <option value="" disabled selected>Select Subject</option>
-                    <option value="Admission Enquiry">Admission &amp; Cutoff Query</option>
-                    <option value="Fee & Scholarships">Fee Structure &amp; Scholarships</option>
-                    <option value="Academic Verification">Academic Verification / Transcript</option>
-                    <option value="Hostel & Facilities">Hostel Accommodation &amp; Buses</option>
-                    <option value="Industry Collaboration">Industry Partnership &amp; Recruitment</option>
-                    <option value="General Query">General Institutional Query</option>
-                  </select>
-                  <span class="field-error" data-error-for="contactSubject"></span>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="contactMessage">Message / Query Description <span class="req">*</span></label>
-                <textarea id="contactMessage" name="contactMessage" rows="3" placeholder="Write your enquiry or message here..." required minlength="5"></textarea>
-                <span class="field-error" data-error-for="contactMessage"></span>
-              </div>
-
-              <button type="submit" class="btn btn--primary btn--submit" id="contactSubmitBtn">
-                <span class="btn-text">Send Official Message</span>
-                <span class="btn-spinner" aria-hidden="true"></span>
-              </button>
-
-              <div class="form-status-alert" id="contactFormStatus" role="alert" aria-live="polite"></div>
-            </form>
+          <div class="directions-actions">
+            <button type="button" class="btn btn--outline btn--sm" id="btnCopyAddress">
+              📋 Copy Official Address
+            </button>
+            <a href="https://maps.google.com/?q=Anwer+College+of+Engineering+and+Technology" target="_blank" rel="noopener" class="btn btn--secondary btn--sm">
+              🗺️ Open in Google Maps &nearr;
+            </a>
+            <a href="#admissions" class="btn btn--primary btn--sm">
+              ✍️ Apply / Submit Admission Enquiry &darr;
+            </a>
           </div>
         </div>
       </div>
@@ -1445,7 +1390,7 @@
 
   <!-- EmailJS Browser SDK (v4) -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <!-- Main Application Logic (Cache-busted v2.3) -->
-  <script src="js/main.js?v=2.3"></script>
+  <!-- Main Application Logic (Cache-busted v2.4) -->
+  <script src="js/main.js?v=2.4"></script>
 </body>
 </html>

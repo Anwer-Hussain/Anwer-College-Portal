@@ -1327,12 +1327,8 @@ function updateContactCounts() {
   }
 }
 
-function initContactForm() {
-  const form = document.getElementById("contactForm");
-  const submitBtn = document.getElementById("contactSubmitBtn");
-  const formStatus = document.getElementById("contactFormStatus");
+function initTransitControls() {
   const copyBtn = document.getElementById("btnCopyAddress");
-
   if (copyBtn) {
     copyBtn.addEventListener("click", () => {
       const address = "Anwer College of Engineering & Technology, NH-48, Chennai–Bengaluru Highway, Kanchipuram – 631 502, Tamil Nadu, India.";
@@ -1343,132 +1339,6 @@ function initContactForm() {
       });
     });
   }
-
-  if (!form) return;
-
-  // Clear errors on input
-  ["contactName", "contactEmail", "contactSubject", "contactMessage"].forEach(f => {
-    const input = form.elements[f];
-    if (input) {
-      input.addEventListener("input", () => showFieldError(f, ""));
-    }
-  });
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    if (formStatus) {
-      formStatus.className = "form-status-alert";
-      formStatus.textContent = "";
-    }
-
-    const name = form.elements.contactName.value.trim();
-    const email = form.elements.contactEmail.value.trim();
-    const phone = form.elements.contactPhone ? form.elements.contactPhone.value.trim() : "";
-    const subject = form.elements.contactSubject.value;
-    const message = form.elements.contactMessage.value.trim();
-
-    let hasError = false;
-    if (name.length < 2) {
-      showFieldError("contactName", "Please enter your full name (min 2 characters).");
-      hasError = true;
-    } else {
-      showFieldError("contactName", "");
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      showFieldError("contactEmail", "Please enter a valid email address.");
-      hasError = true;
-    } else {
-      showFieldError("contactEmail", "");
-    }
-
-    if (!subject) {
-      showFieldError("contactSubject", "Please select a query category.");
-      hasError = true;
-    } else {
-      showFieldError("contactSubject", "");
-    }
-
-    if (message.length < 5) {
-      showFieldError("contactMessage", "Message must be at least 5 characters.");
-      hasError = true;
-    } else {
-      showFieldError("contactMessage", "");
-    }
-
-    if (hasError) {
-      if (formStatus) {
-        formStatus.className = "form-status-alert is-error";
-        formStatus.textContent = "Please correct the highlighted fields before sending.";
-      }
-      return;
-    }
-
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.classList.add("btn--loading");
-    }
-
-    const ticketId = `MSG-2026-${Math.floor(1000 + Math.random() * 9000)}`;
-    const contactEntry = {
-      id: Date.now(),
-      ticketId,
-      submittedAt: new Date().toISOString(),
-      name,
-      email,
-      phone: phone || "Not Provided",
-      subject,
-      message
-    };
-
-    // 1. Try sending to backend API
-    try {
-      await fetch(`${API_BASE}/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(contactEntry)
-      });
-    } catch (err) {
-      // offline/static fallback
-    }
-
-    // 2. Persist in local storage
-    const list = getStoredContacts();
-    list.unshift(contactEntry);
-    localStorage.setItem(LOCAL_STORAGE_CONTACTS_KEY, JSON.stringify(list));
-    updateContactCounts();
-
-    // 3. Dispatch via EmailJS to meerananwer12@gmail.com
-    const emailRes = await sendEmailViaEmailJs(buildEmailTemplateParams({
-      fullName: name,
-      email: email,
-      phone: phone || "Not Provided",
-      department: subject,
-      marksPercentage: "N/A",
-      quota: "Direct Campus Message",
-      message: message,
-      ticketId: ticketId
-    }));
-
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.classList.remove("btn--loading");
-    }
-
-    form.reset();
-
-    if (formStatus) {
-      formStatus.className = "form-status-alert is-success";
-      if (emailRes.success) {
-        formStatus.innerHTML = `<strong>Message Dispatched Successfully!</strong><br>An email alert was delivered directly to <strong>${EMAILJS_CONFIG.targetEmail}</strong> via EmailJS (Ticket Ref: <code>${ticketId}</code>). Our administration will respond within 24 hours.`;
-      } else {
-        formStatus.innerHTML = `<strong>Message Logged Successfully!</strong><br>Ticket Reference: <code>${ticketId}</code>. Logged in college administration records and queued for dispatch to <strong>${EMAILJS_CONFIG.targetEmail}</strong>.`;
-      }
-    }
-
-    showToast(`Official message logged! Ref: ${ticketId}`, "✉️");
-  });
 }
 
 // ==========================================================================
@@ -1638,7 +1508,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initDepartmentFeatures();
   initFeeCalculator();
   initAdmissionForm();
-  initContactForm();
+  initTransitControls();
   initAdminModal();
   initEmailJsAdminSettings();
   initAdminTabs();

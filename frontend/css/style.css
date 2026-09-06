@@ -2184,54 +2184,46 @@ button, input, select, textarea {
   line-height: 1.6;
 }
 
-/* Contact Hub: Directions & Direct Message Form */
-.contact-hub-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.25fr;
-  gap: 2rem;
-  margin-top: 2.5rem;
-}
-
-.contact-hub-card {
+/* Directions & Transit Full Card */
+.directions-full-card {
   background: var(--surface-white);
   border: 1px solid var(--surface-border);
   border-radius: var(--radius-lg);
-  padding: 2.25rem 2rem;
+  padding: 2.5rem 2rem;
+  margin-top: 2.5rem;
   box-shadow: var(--shadow-sm);
-}
-
-.directions-card {
-  display: flex;
-  flex-direction: column;
   background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
 }
 
-.directions-card h3 {
+.directions-header h3 {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   color: var(--navy-950);
   margin-bottom: 0.5rem;
 }
 
 .directions-intro {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   line-height: 1.5;
 }
 
-.transit-items {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+.transit-items-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   margin-bottom: 2rem;
-  flex: 1;
 }
 
 .transit-item {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  background: var(--surface-white);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--surface-border);
 }
 
 .transit-icon {
@@ -2263,51 +2255,13 @@ button, input, select, textarea {
 .directions-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: auto;
-  padding-top: 1rem;
+  gap: 1rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--surface-border);
 }
 
-.message-form-card {
-  border-top: 4px solid var(--blue-600);
-}
-
-.form-card-header {
-  margin-bottom: 1.5rem;
-}
-
-.emailjs-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  background: rgba(37, 99, 235, 0.1);
-  color: var(--blue-600);
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-full);
-  margin-bottom: 0.65rem;
-}
-
-.form-card-header h3 {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  color: var(--navy-950);
-  margin-bottom: 0.35rem;
-}
-
-.form-card-header p {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-  margin: 0;
-}
-
 @media (max-width: 900px) {
-  .contact-hub-grid {
+  .transit-items-grid {
     grid-template-columns: 1fr;
   }
 }
