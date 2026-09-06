@@ -208,3 +208,11 @@ could you give me the prompt i have pasted here. since it is my assignment. my m
 ```text
 i need all the prompy from the beginning of this project to end. all the prompts i =f you can give it as a pdf thats also fine
 ```
+
+### Prompt 23
+> **Date / Time:** 2026-09-06 21:57 IST  
+> **Tag:** Faculty Addition • Department Head Assignment  
+```text
+i have added a new person in the faculty section. Abdul Gani make him a head of the dept any dept as your wish
+```
+
